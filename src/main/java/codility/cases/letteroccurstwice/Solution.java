@@ -6,12 +6,16 @@ import java.util.stream.IntStream;
 
 public class Solution {
 
+    // Regular expression to find character that occurs twice in a String.
+    private final String TWICE_CHAR_REGEX = "[a-z]*([a-z])[a-z]*\\1[a-z]*";
     public String solution(String S) {
 
-        // 'Matcher' defined using a 'Pattern' that is constructed from a regular expression designed to find a character that occurs twice in the string.
-        Matcher matcher = Pattern.compile("[a-z]*([a-z])[a-z]*\\1[a-z]*").matcher(S);
+        // 'Matcher' built using a 'Pattern' that compiles the 'regex' to find a repeated character
+        final Matcher matcher = Pattern.compile(TWICE_CHAR_REGEX).matcher(S);
 
-        return matcher.find() ? matcher.group(1) : "";
+        // If any character occurs twice, it will be contained in the regex first group, so it will be returned.
+        // Else, a null value will be returned.
+        return matcher.find() ? matcher.group(1) : null;
 
     }
 }

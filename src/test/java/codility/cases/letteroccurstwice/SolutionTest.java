@@ -34,7 +34,7 @@ class SolutionTest {
 
         String input = "abcdefghijk";
 
-        assertEquals("", solution.solution(input));
+        assertEquals(null, solution.solution(input));
     }
     @Test
     public void solutionTest5() {
@@ -49,7 +49,7 @@ class SolutionTest {
 
         String input = "11";
 
-        assertEquals("", solution.solution(input));
+        assertEquals(null, solution.solution(input));
     }
 
 }
