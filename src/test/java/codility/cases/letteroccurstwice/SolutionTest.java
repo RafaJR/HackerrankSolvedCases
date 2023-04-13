@@ -12,6 +12,7 @@ class SolutionTest {
     public void solutionTest1() {
 
         String input = "aba";
+        
 
         assertEquals("a", solution.solution(input));
     }
